@@ -1,0 +1,28 @@
+<div class="container">
+	<ng-container *ngIf="selectedCamName; else noSelectedCam">
+		<h3 class="center-text">
+			Events list from: <span>{{ selectedCamName }}</span>
+		</h3>
+	</ng-container>
+
+	<ng-container *ngIf="events$ | async as events">
+		<ul>
+			<li
+				*ngFor="let evt of events"
+				class="event-card"
+				(click)="handleEventClick(evt)"
+			>
+				<div>
+					<strong>Date:</strong> {{ evt.time | date: 'yyyy-MM-dd hh:mm' }}
+				</div>
+				<div><strong>Latitude:</strong> {{ evt.geoLocation[0] }}</div>
+				<div><strong>Longitude:</strong> {{ evt.geoLocation[1] }}</div>
+				<div><strong>Description:</strong> {{ evt.description }}</div>
+			</li>
+		</ul>
+	</ng-container>
+</div>
+
+<ng-template #noSelectedCam>
+	<div class="center-text">No camera selected!</div>
+</ng-template>

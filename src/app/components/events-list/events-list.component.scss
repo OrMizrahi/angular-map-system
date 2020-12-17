@@ -1,0 +1,38 @@
+.container {
+	height: 100%;
+	width: 100%;
+	margin: 0em;
+
+	ul :hover {
+		background-color: lightblue;
+		cursor: pointer;
+	}
+
+	ul {
+		padding: 0;
+		max-height: 350px;
+		margin: 0em;
+		overflow-y: auto;
+		margin-top: 25px;
+
+		li {
+			padding: 3px 5px;
+			margin-bottom: 10px;
+		}
+	}
+
+	h3 {
+		padding: 0 6px;
+		margin: 3px 0;
+		span {
+			color: #369;
+		}
+	}
+}
+.center-text {
+	text-align: center;
+}
+.event-card {
+	border-bottom: 2px solid red;
+	border-radius: 5px;
+}

@@ -1,0 +1,25 @@
+.container {
+	form {
+		fieldset {
+			padding: 0 20px;
+			border: solid 1px #ccc;
+			div {
+				margin: 15px 0;
+			}
+			input {
+				padding: 2px 4px;
+			}
+		}
+		label {
+			display: block;
+		}
+		button {
+			padding: 5px;
+			margin-top: 10px;
+		}
+	}
+}
+
+.alert {
+	border: solid 1px #c00;
+}
